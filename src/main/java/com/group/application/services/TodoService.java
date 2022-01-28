@@ -1,6 +1,6 @@
 package com.group.application.services;
 
-import com.group.domain.entities.Todo;
+import com.group.domain.entities.todo.Todo;
 import com.group.domain.ports.TodoRepositoryPort;
 import com.group.domain.ports.TodoServicePort;
 
@@ -22,26 +22,32 @@ public class TodoService implements TodoServicePort {
 
     @Override
     public int createTodo(Todo todo) {
-        return 0;
+        return this.todoRepository.save(todo);
     }
 
     @Override
     public Todo getTodo(Todo todo) {
-        return null;
+        return this.todoRepository.getOne(todo);
     }
 
     @Override
     public List<Todo> getTodos() {
-        return null;
+        return this.todoRepository.getAll();
     }
 
     @Override
     public int updateTodo(Todo todo) {
-        return 0;
+        return this.todoRepository.update(todo);
     }
 
     @Override
     public int deleteTodo(Todo todo) {
-        return 0;
+        return this.todoRepository.delete(todo);
+    }
+
+    @Override
+    public int countTodos() {
+        List<Todo> todos = this.todoRepository.getAll();
+        return todos.size();
     }
 }

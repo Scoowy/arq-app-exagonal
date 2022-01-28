@@ -1,6 +1,6 @@
 package com.group.domain.ports;
 
-import com.group.domain.entities.Todo;
+import com.group.domain.entities.todo.Todo;
 
 import java.util.List;
 

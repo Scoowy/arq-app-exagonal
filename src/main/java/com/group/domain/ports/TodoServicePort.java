@@ -1,6 +1,6 @@
 package com.group.domain.ports;
 
-import com.group.domain.entities.Todo;
+import com.group.domain.entities.todo.Todo;
 
 import java.util.List;
 
@@ -20,4 +20,6 @@ public interface TodoServicePort {
     public int updateTodo(Todo todo);
 
     public int deleteTodo(Todo todo);
+
+    public int countTodos();
 }

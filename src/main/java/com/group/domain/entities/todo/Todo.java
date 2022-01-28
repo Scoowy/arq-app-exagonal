@@ -1,4 +1,4 @@
-package com.group.domain.entities;
+package com.group.domain.entities.todo;
 
 import java.util.StringJoiner;
 import java.util.UUID;

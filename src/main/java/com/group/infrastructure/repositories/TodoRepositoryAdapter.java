@@ -1,6 +1,6 @@
 package com.group.infrastructure.repositories;
 
-import com.group.domain.entities.Todo;
+import com.group.domain.entities.todo.Todo;
 import com.group.domain.ports.TodoRepositoryPort;
 import com.group.infrastructure.databases.MySqlConnection;
 
@@ -26,6 +26,9 @@ public class TodoRepositoryAdapter implements TodoRepositoryPort {
     private static final String SQL_INSERT = "INSERT INTO todos(id, title, content, category, status) VALUES(?, ?, ?, ?, ?)";
     private static final String SQL_UPDATE = "UPDATE todos SET title = ?, content = ?, category = ?, status = ? WHERE id = ?";
     private static final String SQL_DELETE = "DELETE FROM todos WHERE id = ?";
+
+    public TodoRepositoryAdapter() {
+    }
 
     public TodoRepositoryAdapter(Connection conn) {
         this.conn = conn;
