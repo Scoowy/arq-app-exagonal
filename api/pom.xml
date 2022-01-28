@@ -10,6 +10,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>api</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.group</groupId>
+            <artifactId>arq-exagonal</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
